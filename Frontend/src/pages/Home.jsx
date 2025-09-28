@@ -122,8 +122,11 @@ const Home = () => {
 
 
             {/* Top Brands Banner */}
-            <div className="mt-1- mb-10  mx-10 h-[200px] bg-[#3C4242] bg-cover rounded-md ">
-                <h1>Top Brands Deal</h1>
+            <div className="mt-1- mb-10  mx-10 min-h-[200px] bg-[#3C4242] bg-cover rounded-md p-10 ">
+                <div className="flex flex-col w-full justify-start items-center">
+                    <h1 className="text-[#FFFFFF] text-[30px] font-bold font-[Core Sans C]">Top Brands Deal</h1>
+                    <p className="tetx-[22px] text-[#FFFFF]">Up To <span>60%</span> off on brands</p>
+                </div>
 
             </div>
 
