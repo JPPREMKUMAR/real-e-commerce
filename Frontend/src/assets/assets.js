@@ -17,6 +17,16 @@ import shopHero from "../assets/shop-hero.jpg"
 import bannerOne from "../assets/banner-one.jpg"
 import bannerTwo from "../assets/banner-two.jpg"
 
+import Arrow from "../assets/Arrow.png"
+import categoryWomen1 from "../assets/categoryWomen1.png"
+import categoryWomen2 from "../assets/categoryWomen2.png"
+import categoryWomen3 from "../assets/categoryWomen3.png"
+import categoryWomen4 from "../assets/categoryWomen4.png"
+
+import fashionBanner1 from "../assets/fashionBanner1.png"
+import fashionBanner2 from "../assets/fashionBanner2.png"
+
+
 
 
 
@@ -29,8 +39,8 @@ export {
     left, verificationImage,
     createNewPasswordImage,
     user, heart, shoppingcart,
-    shopHero, bannerOne, bannerTwo
-
-
+    shopHero, bannerOne, bannerTwo,
+    Arrow, categoryWomen1, categoryWomen2, categoryWomen3, categoryWomen4,
+    fashionBanner1, fashionBanner2
 
 }

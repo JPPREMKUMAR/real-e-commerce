@@ -1,4 +1,23 @@
-import { shopHero, bannerOne, bannerTwo } from "../assets/assets"
+import {
+    shopHero, bannerOne, bannerTwo,
+    categoryWomen1, categoryWomen2,
+    categoryWomen3, categoryWomen4,
+    fashionBanner1, fashionBanner2
+
+
+
+} from "../assets/assets"
+
+
+import category1 from "../assets/category1.png"
+import category2 from "../assets/category2.png"
+import category3 from "../assets/category3.png"
+import category4 from "../assets/category4.png"
+import category5 from "../assets/category5.png"
+import category6 from "../assets/category6.png"
+import category7 from "../assets/category7.png"
+import category8 from "../assets/category8.png"
+
 import Title from "../components/Title"
 
 import CategoryCardItem from "../components/CategoryCardItem"
@@ -6,16 +25,21 @@ import CategoryCardItem from "../components/CategoryCardItem"
 
 
 const categoryForMen = [
-    { name: "Shirts", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039436/ShirtsCategory_uobjit.png" },
-    { name: "Printed T-Shirt", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039432/Rectangle_21_tbx3iw.png" },
-    { name: "Plain T-Shirt", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039431/Rectangle_22_1_f6oieu.png" },
-    { name: "Polo T-Shirt", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039435/Rectangle_22_2_koxva7.png" },
-    { name: "Hoodies & Sweetshirt", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039433/Rectangle_20_bsd1ji.png" },
-    { name: "Jeans", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039431/Rectangle_21_1_npwdmy.png" },
-    { name: "Activewear", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039432/Rectangle_22_3_k5mobt.png" },
-    { name: "Boxers", imageUrl: "https://res.cloudinary.com/dokbp23jt/image/upload/v1759039427/Rectangle_22_4_dtyp6y.png" },
+    { name: "Shirts", imageUrl: category8 },
+    { name: "Printed T-Shirt", imageUrl: category7 },
+    { name: "Plain T-Shirt", imageUrl: category5 },
+    { name: "Polo T-Shirt", imageUrl: category6 },
+    { name: "Hoodies & Sweetshirt", imageUrl: category3 },
+    { name: "Jeans", imageUrl: category4 },
+    { name: "Activewear", imageUrl: category1 },
+    { name: "Boxers", imageUrl: category2 }
+]
 
-
+const categoryForWomen = [
+    { name: "Hoodies & Sweetshirts", imageUrl: categoryWomen1 },
+    { name: "Coats & Parkas", imageUrl: categoryWomen2 },
+    { name: "Tees & T-Shirts", imageUrl: categoryWomen3 },
+    { name: "Boxers", imageUrl: categoryWomen4 },
 ]
 
 
@@ -69,14 +93,39 @@ const Home = () => {
 
             </div>
 
-            {/* Categories For Men */}
-            <div>
-                <Title text="" />
-                <CategoryCardItem />
 
+            {/*Fashion Ad Banner  */}
+
+
+            {/* Categories For Men */}
+            <Title text="Categories For Men" />
+            <div className="px-10 grid grid-cols-4 gap-x-4 gap-y-4 ">
+                {
+                    categoryForMen.map((item, index) => (
+                        <CategoryCardItem key={index} item={item} />
+                    ))
+                }
             </div>
 
 
+            {/*Categories For Women */}
+            <Title text={'Categories For Women'} />
+            <div className="px-10 grid grid-cols-4 gap-x-10 gap-y-4 ">
+                {
+                    categoryForWomen.map((item, index) => (
+
+                        <CategoryCardItem key={index} item={item} />
+                    ))
+                }
+            </div>
+
+
+
+            {/* Top Brands Banner */}
+            <div className="mt-1- mb-10  mx-10 h-[200px] bg-[#3C4242] bg-cover rounded-md ">
+                <h1>Top Brands Deal</h1>
+
+            </div>
 
         </div >
     )
