@@ -13,6 +13,10 @@ import createNewPasswordImage from "../assets/createNewPasswordImage.png"
 import heart from '../assets/heart.png'
 import shoppingcart from "../assets/shoppingcart.png"
 import user from "../assets/user.png"
+import shopHero from "../assets/shop-hero.jpg"
+import bannerOne from "../assets/banner-one.jpg"
+import bannerTwo from "../assets/banner-two.jpg"
+
 
 
 
@@ -24,6 +28,9 @@ export {
     resetPasswordImage, checkEmailImage,
     left, verificationImage,
     createNewPasswordImage,
+    user, heart, shoppingcart,
+    shopHero, bannerOne, bannerTwo
 
-    user, heart, shoppingcart
+
+
 }

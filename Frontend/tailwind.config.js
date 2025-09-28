@@ -7,6 +7,7 @@ module.exports = {
                 poppins: ["Poppins", "sans-serif"],
                 montserrat: ["Montserrat", "sans-serif"],
             },
+
         },
     },
     plugins: [],

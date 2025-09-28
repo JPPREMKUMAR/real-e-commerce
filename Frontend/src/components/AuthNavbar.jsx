@@ -13,9 +13,9 @@ const AuthNavbar = () => {
     return (
 
         <div className="flex justify-between items-center p-8 px-10 py-6 border-b border-[#BEBCBD]">
-            <div>
+            <Link to="/">
                 <img src={website_logo} alt="website logo" />
-            </div>
+            </Link>
 
             <ul className="flex items-center gap-x-3">
                 <Link to="/" className="text-[#807D7E] text-md hover:text-[#3C4242]"  >Shop</Link>
