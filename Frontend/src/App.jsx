@@ -24,7 +24,7 @@ import OrderDetails from './pages/OrderDetails'
 import Error from './pages/Error'
 import Navbar from "./components/Navbar"
 import AuthNavbar from './components/AuthNavbar'
-
+import Footer from "./components/Footer"
 
 const App = () => {
 
@@ -58,6 +58,7 @@ const App = () => {
         <Route path="/my-order/:id" element={<OrderDetails />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
