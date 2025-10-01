@@ -140,6 +140,8 @@ export const MainContextProvider = (props) => {
 
     ]
 
+    const wishlistList = []
+
 
 
     const value = {
@@ -150,7 +152,8 @@ export const MainContextProvider = (props) => {
         stylesList,
         pricesList,
         productsList,
-        cartsList
+        cartsList,
+        wishlistList
 
 
 

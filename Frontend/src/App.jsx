@@ -13,7 +13,7 @@ import ProductsList from './pages/ProductsList'
 import ProductDetails from './pages/ProductDetails'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
-import ContactDetails from './pages/ContactDetails'
+import Account from './pages/Account'
 import AddAddress from './pages/AddAddress'
 import ConfirmedOrder from './pages/ConfirmedOrder'
 import EmptyCart from './pages/EmptyCart'
@@ -48,13 +48,13 @@ const App = () => {
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/contact-details" element={<ContactDetails />} />
+        <Route path="/account/info" element={<Account />} />
         <Route path="/add-address" element={<AddAddress />} />
         <Route path="/order-confirmed" element={<ConfirmedOrder />} />
         <Route path="/empty-cart" element={<EmptyCart />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/empty-wishlist" element={<EmptyWishlist />} />
-        <Route path="/my-order" element={<MyOrder />} />
+        <Route path="/account/wishlist" element={<Wishlist />} />
+        <Route path="/account/empty-wishlist" element={<EmptyWishlist />} />
+        <Route path="/account/my-orders" element={<MyOrder />} />
         <Route path="/my-order/:id" element={<OrderDetails />} />
         <Route path="*" element={<Error />} />
       </Routes>

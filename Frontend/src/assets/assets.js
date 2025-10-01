@@ -76,8 +76,13 @@ import creditcard from "../assets/creditcard.png"
 import plus from "../assets/plus.png"
 import minus from "../assets/minus.png"
 import deleteIcon from "../assets/deleteIcon.png"
+import emptyCart from "../assets/emptyCart.png"
+import errorImage from "../assets/errorImage.png"
+import orderConfirmed from "../assets/orderConfirmed.png"
 
+import myOrders from "../assets/myOrders.png"
 
+import greenHeart from "../assets/greenHeart.png"
 
 
 export {
@@ -102,6 +107,7 @@ export {
 
     stars, commentsIcon, cartIcon,
     freeShipping, creditcard, size, truck,
-    plus, minus, deleteIcon
+    plus, minus, deleteIcon, emptyCart, errorImage, orderConfirmed,
+    myOrders, greenHeart
 
 }

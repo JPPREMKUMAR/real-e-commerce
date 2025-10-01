@@ -1,14 +1,22 @@
-
+import { orderConfirmed } from "../assets/assets"
+import { MainContext } from "../context/MainContext"
+import { useContext } from "react"
 
 
 const ConfirmedOrder = () => {
 
+    const { navigate } = useContext(MainContext)
+
 
     return (
 
-        <div>
+        <div className=" h-[700px] flex justify-center items-center">
 
-            <h1>ConfirmedOrder</h1>
+            <div className="flex flex-col justidy-center items-center ">
+                <img alt="order confirm" src={orderConfirmed} className="cursor-pointer" onClick={() => navigate("/")} />
+
+            </div>
+
         </div>
     )
 }

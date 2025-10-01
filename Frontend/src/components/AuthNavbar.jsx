@@ -30,8 +30,8 @@ const AuthNavbar = () => {
             </div>
             <ul className="flex items-center px-4 gap-x-5 ">
 
-                <Link to="/wishlist" className="bg-[#F6F6F6] w-[44px] h-[44px] rounded flex justify-center items-center rounded-md"   ><img src={heart} alt="heart" /></Link>
-                <Link to="/contact-details" className="bg-[#F6F6F6] w-[44px] h-[44px] rounded flex justify-center items-center rounded-md"  ><img src={user} alt="user" /></Link>
+                <Link to="/account/wishlist" className="bg-[#F6F6F6] w-[44px] h-[44px] rounded flex justify-center items-center rounded-md"   ><img src={heart} alt="heart" /></Link>
+                <Link to="/account" className="bg-[#F6F6F6] w-[44px] h-[44px] rounded flex justify-center items-center rounded-md"  ><img src={user} alt="user" /></Link>
                 <Link to="/cart" className="bg-[#F6F6F6] w-[44px] h-[44px] rounded flex justify-center items-center rounded-md"   ><img src={shoppingcart} alt="shopping cart" /></Link>
             </ul>
 
