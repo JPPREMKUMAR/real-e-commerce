@@ -2,9 +2,8 @@
 
 import { Link } from "react-router-dom"
 import { leftStroke, myOrders, greenHeart } from "../assets/assets"
-
-
-
+import ProductCard from "../components/ProductCard"
+import Title from "../components/Title"
 import { useContext, useState } from "react"
 import { MainContext } from "../context/MainContext"
 
@@ -12,7 +11,7 @@ const Wishlist = () => {
 
 
     const [isActive, setIsActive] = useState('wishlist')
-    const { navigate, wishlistList } = useContext(MainContext)
+    const { navigate, wishlistList, productsList } = useContext(MainContext)
     console.log(wishlistList.length)
 
     return (
@@ -90,6 +89,17 @@ const Wishlist = () => {
 
 
                 <Title text="Recently Viewed" />
+
+                <div className="grid grid-cols-4 px-10 gap-x-4 mb-10">
+
+                    {
+
+                        productsList.slice(0, 4).map((item) => (
+
+                            <ProductCard key={item.id} item={item} />
+                        ))
+                    }
+                </div>
 
             </div>
 
