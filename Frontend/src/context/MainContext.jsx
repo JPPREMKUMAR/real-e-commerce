@@ -1,8 +1,13 @@
-import { createContext } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { v6 as uuid } from "uuid"
 import { product1, product2, product3, product4, product5, product6, product7, product8, product9, categoryWomen1, categoryWomen2, categoryWomen3, categoryWomen4 } from "../assets/assets"
+
+import Cookies from "js-cookie"
+import axios from "axios"
+
+
 
 
 export const MainContext = createContext()
@@ -13,6 +18,26 @@ export const MainContext = createContext()
 export const MainContextProvider = (props) => {
 
     const navigate = useNavigate()
+
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
+
+    const [jwtToken, setJwtToken] = useState(Cookies.get("jwtToken"))
+    const [contactDetails, setContactDetails] = useState({})
+    const [addressList, setAddressList] = useState([])
+
+    console.log(jwtToken)
+    useEffect(() => {
+        if (jwtToken === undefined) {
+
+            return navigate("/login")
+        }
+    }, [])
+
+
+
+
+
+
 
     const colorsList = [
         { id: uuid(), name: "Purpole", color: "#8434E1" },
@@ -140,20 +165,47 @@ export const MainContextProvider = (props) => {
 
     ]
 
-    const wishlistList = []
+    const wishlistList = cartsList
+
+    const ordersList = cartsList
+
+
+    const getContactDetails = async () => {
+        const response = await axios.post(backendUrl + "/api/user/contactDetails", {}, { headers: { jwtToken } })
+        //console.log(response.data)
+        const userDetails = response.data.contactDetails
+        console.log(userDetails)
+        setContactDetails(userDetails)
+
+    }
+
+
+
+
+    useEffect(() => {
+        getContactDetails()
+
+    }, [])
+
+
 
 
 
     const value = {
 
         navigate,
+        backendUrl,
         colorsList,
         sizesList,
         stylesList,
         pricesList,
         productsList,
         cartsList,
-        wishlistList
+        wishlistList,
+        ordersList,
+        jwtToken, setJwtToken,
+        contactDetails,
+        addressList,
 
 
 

@@ -1,7 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom'
 import { MainContext } from './context/MainContext'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import SignUp from "./pages/SignUp"
 import LogIn from './pages/LogIn'
 import RetPassword from './pages/ResetPassword'
@@ -25,16 +25,27 @@ import Error from './pages/Error'
 import Navbar from "./components/Navbar"
 import AuthNavbar from './components/AuthNavbar'
 import Footer from "./components/Footer"
+import WishListItems from "./pages/WishListItems"
 
 const App = () => {
+
+
+  const { jwtToken } = useContext(MainContext)
+
+
+  useEffect(() => {
+    console.log("Hello")
+
+  }, [])
 
 
 
 
   return (
 
-    <div>
-      <AuthNavbar />
+    <div>{
+      jwtToken !== undefined ? <AuthNavbar /> : <Navbar />}
+
 
       <Routes>
         <Route path="/signup" element={<SignUp />} />
@@ -49,10 +60,11 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/account/info" element={<Account />} />
-        <Route path="/add-address" element={<AddAddress />} />
+        <Route path="/account/info/add-address" element={<AddAddress />} />
         <Route path="/order-confirmed" element={<ConfirmedOrder />} />
         <Route path="/empty-cart" element={<EmptyCart />} />
         <Route path="/account/wishlist" element={<Wishlist />} />
+        <Route path="/account/wishlist-items" element={<WishListItems />} />
         <Route path="/account/empty-wishlist" element={<EmptyWishlist />} />
         <Route path="/account/my-orders" element={<MyOrder />} />
         <Route path="/my-order/:id" element={<OrderDetails />} />
